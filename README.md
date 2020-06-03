@@ -13,5 +13,5 @@ python download_SRA.py --sample sample_id --outdir /path/to/output/directory/
 python sra_to_fastq.py --folder /path/to/output/directory/
 
 ### Additional
-User can also delete .sra files using following command:
+User can also delete .sra files using following command:<br />
 find /path/to/output/directory/ -name "\*.sra" -type -delete
