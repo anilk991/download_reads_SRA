@@ -14,8 +14,13 @@ path = args.folder
 if not path.endswith('/'):
 	path += '/'
 
+# Creating list of all files ending with .sra and an additional *
+# because download_SRA.py stores all files in a new folder
 sra = glob(path + '*/*.sra')
 
+
+# First part of for loop is for checking progress
+# Second part saves fastq files in the same folder containing .sra files
 for i in range(len(sra)):
 	sys.stdout.write('\r')
 	sys.stdout.write("[%-20s] %d%%" % ('='*i, 5*i))
