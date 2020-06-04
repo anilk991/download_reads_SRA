@@ -3,6 +3,8 @@ import lxml.etree
 import os
 import argparse as ap
 
+#Entrez.email = your@email.com
+
 def get_ids(project):
 	han = Entrez.esearch(db='sra', term=project, retmax=2000)
 	rec = Entrez.read(han)
